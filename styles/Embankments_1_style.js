@@ -21,7 +21,7 @@ var style_Embankments_1 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(122,49,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 2}),
+        stroke: new ol.style.Stroke({color: 'rgba(108,56,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 2}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

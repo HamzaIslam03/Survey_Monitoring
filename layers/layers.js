@@ -46,13 +46,10 @@ var features_Survey_update_3 = format_Survey_update_3.readFeatures(json_Survey_u
 var jsonSource_Survey_update_3 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Survey_update_3.addFeatures(features_Survey_update_3);cluster_Survey_update_3 = new ol.source.Cluster({
-  distance: 10,
-  source: jsonSource_Survey_update_3
-});
+jsonSource_Survey_update_3.addFeatures(features_Survey_update_3);
 var lyr_Survey_update_3 = new ol.layer.Vector({
                 declutter: true,
-                source:cluster_Survey_update_3, 
+                source:jsonSource_Survey_update_3, 
                 style: style_Survey_update_3,
                 interactive: true,
                 title: '<img src="styles/legend/Survey_update_3.png" /> Survey_update'
@@ -65,7 +62,7 @@ lyr_Sindh_boundary_2.set('fieldAliases', {'ID_0': 'ID_0', 'ISO': 'ISO', 'NAME_0'
 lyr_Survey_update_3.set('fieldAliases', {'Sr': 'Sr', 'X': 'X', 'Y': 'Y', 'Elev': 'Elev', 'Desc': 'Desc', });
 lyr_Embankments_1.set('fieldImages', {'id': 'TextEdit', 'name': 'TextEdit', });
 lyr_Sindh_boundary_2.set('fieldImages', {'ID_0': 'TextEdit', 'ISO': 'TextEdit', 'NAME_0': 'TextEdit', 'ID_1': 'TextEdit', 'NAME_1': 'TextEdit', 'TYPE_1': 'TextEdit', 'ENGTYPE_1': 'TextEdit', 'NL_NAME_1': 'TextEdit', 'VARNAME_1': 'TextEdit', });
-lyr_Survey_update_3.set('fieldImages', {'Sr': '', 'X': '', 'Y': '', 'Elev': '', 'Desc': '', });
+lyr_Survey_update_3.set('fieldImages', {'Sr': 'TextEdit', 'X': 'TextEdit', 'Y': 'TextEdit', 'Elev': 'TextEdit', 'Desc': 'TextEdit', });
 lyr_Embankments_1.set('fieldLabels', {'id': 'no label', 'name': 'inline label', });
 lyr_Sindh_boundary_2.set('fieldLabels', {'ID_0': 'no label', 'ISO': 'no label', 'NAME_0': 'no label', 'ID_1': 'no label', 'NAME_1': 'no label', 'TYPE_1': 'no label', 'ENGTYPE_1': 'no label', 'NL_NAME_1': 'no label', 'VARNAME_1': 'no label', });
 lyr_Survey_update_3.set('fieldLabels', {'Sr': 'inline label', 'X': 'inline label', 'Y': 'inline label', 'Elev': 'inline label', 'Desc': 'inline label', });
