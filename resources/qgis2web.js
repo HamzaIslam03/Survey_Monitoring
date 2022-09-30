@@ -105,7 +105,7 @@ var map = new ol.Map({
 });
 
 
-map.getView().fit([7094170.337658, 2693041.515557, 8244383.210396, 3326881.366847], map.getSize());
+map.getView().fit([6753929.290544, 2576269.202502, 8501132.756250, 3537613.440928], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -669,6 +669,17 @@ var geolocateOverlay = new ol.layer.Vector({
 
 geolocation.setTracking(true);
 
+
+var geocoder = new Geocoder('nominatim', {
+  provider: 'osm',
+  lang: 'en-US',
+  placeholder: 'Search for ...',
+  limit: 5,
+  keepOpen: true
+});
+map.addControl(geocoder);
+
+document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 
 var attributionComplete = false;
 map.on("rendercomplete", function(evt) {
